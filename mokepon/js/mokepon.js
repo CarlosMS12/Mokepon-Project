@@ -1,5 +1,7 @@
 let ataqueJugador
 let ataqueEnemigo
+let vidasJugador = 3
+let vidasEnemigo = 3
 
 function iniciarJuego(){
     let botonMascotaJugador = document.getElementById("boton-mascota")
@@ -46,7 +48,7 @@ function seleccionarMascotaEnemigo(){
     let mascotaAleatorio = aleatorio(1,6)
     let spanMascotaEnemigo = document.getElementById("mascota-enemigo")
 
-    if(ataqueAleatorio==1){
+    if(mascotaAleatorio==1){
         spanMascotaEnemigo.innerHTML = "Hipodoge "
     } else if(mascotaAleatorio==2){
         spanMascotaEnemigo.innerHTML = "Capipepo "
@@ -84,16 +86,41 @@ function ataqueAleatorioEnemigo() {
         ataqueEnemigo = "TIERRA"
     }
 
-    crearMensaje()
+    combate()
     
 }
 
-function crearMensaje() {
+function crearMensaje(resultado) {
     let sectionMensajes = document.getElementById("mensajes")
     let parrafo = document.createElement("p")
-    parrafo.innerHTML = "Tu mascota atacó con " + ataqueJugador + ", la mascota del enemigo atacó con " + ataqueEnemigo + " - PENDIENTE"
+    parrafo.innerHTML = "Tu mascota atacó con " + ataqueJugador + ", la mascota del enemigo atacó con " + ataqueEnemigo + resultado
 
     sectionMensajes.appendChild(parrafo)
+}
+function combate () {
+    let spanVidasJugador = document.getElementById("vidas-jugador")
+    let spanVidasEnemigo = document.getElementById("vidas-enemigo")
+
+    if(ataqueEnemigo == ataqueJugador) {
+        crearMensaje("-Empate")
+    } else if (ataqueJugador == "FUEGO" && ataqueEnemigo == "TIERRA") {
+        crearMensaje("-Ganaste")
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
+    } else if (ataqueJugador == "AGUA" && ataqueEnemigo == "FUEGO") {
+        crearMensaje("-Ganaste")
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
+    } else if (ataqueJugador == "TIERRA" && ataqueEnemigo == "AGUA") {
+        crearMensaje("-Ganaste")
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
+    } else {
+        crearMensaje("-Perdiste")
+        vidasJugador--
+        spanVidasJugador.innerHTML = vidasJugador
+       
+    }
 }
 
 function aleatorio(min, max) {
