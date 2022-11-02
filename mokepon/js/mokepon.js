@@ -97,6 +97,13 @@ function crearMensaje(resultado) {
 
     sectionMensajes.appendChild(parrafo)
 }
+function crearMensajeFinal(resultadoFinal) {
+    let sectionMensajes = document.getElementById("mensajes")
+    let parrafo = document.createElement("p")
+    parrafo.innerHTML = resultadoFinal
+
+    sectionMensajes.appendChild(parrafo)
+}
 function combate () {
     let spanVidasJugador = document.getElementById("vidas-jugador")
     let spanVidasEnemigo = document.getElementById("vidas-enemigo")
@@ -120,6 +127,14 @@ function combate () {
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
        
+    }
+    revisarVidas()
+}
+function revisarVidas() {
+    if (vidasEnemigo==0) {
+        crearMensajeFinal("FELICITACIONES! GANASTE :)")
+    } else if (vidasJugador==0) {
+        crearMensajeFinal("Lo siento, perdiste :(")
     }
 }
 
