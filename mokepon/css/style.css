@@ -41,3 +41,31 @@ div {
     color: white;
     border: solid 2px white;
 }
+.div-container1 {
+    align-items: center;
+    display: flex;
+}
+.div-sub1 {
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+.div-sub1:hover {
+    background-color: white;
+    color: black;
+}
+.div-sub1:active
+{
+    background-color: white;
+    color: red;
+}
+.div-sub2 {
+    width: 200px;
+    height: 200px;
+}
+.div-sub2 img {
+    width: 100%;
+    height: 100%;
+}
