@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+.titulo {
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 25px;
+    font-size: 2.5rem;
+    color: wheat;
+    width: 31rem;
+    height: 5rem;
+    
+}
+#seleccionar-mascota {
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    margin-top : 5rem;
+    align-items: center;
+}
+
+div {
+    margin: 1rem;
+    border: solid 2px white;
+    padding: 0.5rem;
+    border-radius: 5rem;
+}
+#boton-mascota {
+    border-radius: 0.8rem;
+    padding: 0.7rem;
+}
+#boton-mascota:hover {
+    background-color: black;
+    color: white;
+    border: solid 2px white;
+}
