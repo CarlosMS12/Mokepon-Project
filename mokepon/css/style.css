@@ -224,7 +224,9 @@ h2 {
 
 .divAtaques {
     display: flex;
-    width: 80%;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .divAtaqueFuego {
     display: flex;
@@ -243,4 +245,23 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     width: 50rem;
+}
+#mensajes {
+    width: 40rem;
+    background: aquamarine;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    color: black;
+    font-size: 4rem;
+    height: 20rem;
+}
+#boton-reiniciar {
+    border: transparent;
+    color: black;
+    font-family: 'Mochiy Pop One', sans-serif;
+
 }

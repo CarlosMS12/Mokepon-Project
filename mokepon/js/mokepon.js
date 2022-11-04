@@ -106,18 +106,32 @@ function ataqueAleatorioEnemigo() {
 }
 
 function crearMensaje(resultado) {
-    let sectionMensajes = document.getElementById("mensajes")
-    let parrafo = document.createElement("p")
-    parrafo.innerHTML = "Tu mascota atacó con " + ataqueJugador + ", la mascota del enemigo atacó con " + ataqueEnemigo + resultado
+    let sectionMensajes = document.getElementById("resultado")
+    let ataquesDelJugador = document.getElementById("ataques-del-jugador")
+    let ataquesDelEnemigo = document.getElementById("ataques-del-enemigo")
 
-    sectionMensajes.appendChild(parrafo)
+    let notificacion = document.createElement("p")
+    let nuevoAtaqueDelJugador = document.createElement("p")
+    let nuevoAtaqueDelEnemigo = document.createElement("p")
+    
+    sectionMensajes.innerHTML = resultado
+    nuevoAtaqueDelJugador.innerHTML = ataqueJugador
+    nuevoAtaqueDelEnemigo.innerHTML = ataqueEnemigo
+
+    /* sectionMensajes.appendChild(notificacion) */
+    ataquesDelJugador.appendChild(nuevoAtaqueDelJugador)
+    ataquesDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
+
+    /* let parrafo = document.createElement("p")
+    parrafo.innerHTML = "Tu mascota atacó con " + ataqueJugador + ", la mascota del enemigo atacó con " + ataqueEnemigo + resultado */
+
 }
 function crearMensajeFinal(resultadoFinal) {
-    let sectionMensajes = document.getElementById("mensajes")
-    let parrafo = document.createElement("p")
-    parrafo.innerHTML = resultadoFinal
+    let sectionMensajes = document.getElementById("resultado")
+    
+    sectionMensajes.innerHTML = resultadoFinal
 
-    sectionMensajes.appendChild(parrafo)
+    
 
     let botonFuego = document.getElementById("boton-fuego")
     botonFuego.disabled = true
@@ -128,32 +142,51 @@ function crearMensajeFinal(resultadoFinal) {
 
     let sectionReiniciar = document.getElementById("reiniciar")
     sectionReiniciar.style.display = "block"
+    //boton fuego detenerse
+    let botonnoneF = document.getElementById("boton-fuego")
+    botonnoneF.style.backgroundColor = "black"
+    botonnoneF.style.border = "2px solid white"
+    botonnoneF.style.color = "white"
+
+    let botonnoneA = document.getElementById("boton-agua")
+    botonnoneA.style.backgroundColor = "black"
+    botonnoneA.style.border = "2px solid white"
+    botonnoneA.style.color = "white"
+
+    let botonnoneT = document.getElementById("boton-tierra")
+    botonnoneT.style.backgroundColor = "black"
+    botonnoneT.style.border = "2px solid white"
+    botonnoneT.style.color = "white"
+
+
+
 }
 function combate () {
     let spanVidasJugador = document.getElementById("vidas-jugador")
     let spanVidasEnemigo = document.getElementById("vidas-enemigo")
 
     if(ataqueEnemigo == ataqueJugador) {
-        crearMensaje("-Empate")
+        crearMensaje("EMPATE")
     } else if (ataqueJugador == "FUEGO" && ataqueEnemigo == "TIERRA") {
-        crearMensaje("-Ganaste")
+        crearMensaje("GANASTE")
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if (ataqueJugador == "AGUA" && ataqueEnemigo == "FUEGO") {
-        crearMensaje("-Ganaste")
+        crearMensaje("GANASTE")
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if (ataqueJugador == "TIERRA" && ataqueEnemigo == "AGUA") {
-        crearMensaje("-Ganaste")
+        crearMensaje("GANASTE")
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
     } else {
-        crearMensaje("-Perdiste")
+        crearMensaje("PERDISTE")
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
        
     }
     revisarVidas()
+    
 }
 function revisarVidas() {
     if (vidasEnemigo==0) {
@@ -161,6 +194,8 @@ function revisarVidas() {
     } else if (vidasJugador==0) {
         crearMensajeFinal("Lo siento, perdiste :(")
     }
+
+    
 }
 function reiniciarJuego() {
     location.reload()
