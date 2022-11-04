@@ -139,12 +139,12 @@ h2 {
 .boton-fuegoImagen {
     border: 2px solid transparent;
     margin: 2rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
     background-color: transparent;
     background-image: url("https://www.freeiconspng.com/thumbs/pokemon-png/render-pokemon-png-1.png");
     color: transparent;
     background-repeat: no-repeat;
-    background-position: 50px;
+    background-position: 57px;
     background-size: 20rem;
     height: 30rem;
 }
@@ -152,7 +152,7 @@ h2 {
     background-image: url("https://i.pinimg.com/originals/37/08/62/370862bbff7f3d3345a3d0e9b45a38c3.gif");
     background-position-x: -12rem;
     background-size: 500px 300px;
-    border-radius: 5rem;
+    border-radius: 100rem;
 }
 #boton-agua {
     background-color: black;
@@ -169,7 +169,7 @@ h2 {
 .boton-aguaImagen {
     border: 2px solid transparent;
     margin: 2rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
     background-color: transparent;
     background-image: url("https://assets.stickpng.com/images/580b57fcd9996e24bc43c32a.png");
     color: transparent;
@@ -182,7 +182,7 @@ h2 {
     background-image: url("https://media.tenor.com/sV0s6jmzPyQAAAAC/squirtle-pokemon.gif");
     background-position-x: -12rem;
     background-size: 500px 300px;
-    border-radius: 5rem;
+    border-radius: 100rem;
 }
 #boton-tierra {
     background-color: black;
@@ -193,18 +193,18 @@ h2 {
 }
 #boton-tierra:hover {
     background-color: #b16234;
-    border: none;
+    border: 2px  transparent;
     color: black;
 }
 .boton-tierraImagen {
     border: 2px solid transparent;
     margin: 2rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
     background-color: transparent;
     background-image: url("https://static.pokemonpets.com/images/monsters-images-800-800/104-Cubone.webp");
     color: transparent;
     background-repeat: no-repeat;
-    background-position: 50px;
+    background-position: 63px;
     background-size: 17rem;
     height: 30rem;
 }
@@ -212,7 +212,7 @@ h2 {
     background-image: url("http://pa1.narvii.com/6903/01f9c38879d27a04b7d0b0c2f5d762f30d3a9dbbr1-500-375_00.gif");
     background-position-x: -12rem;
     background-size: 500px 300px;
-    border-radius: 5rem;
+    border-radius: 100rem;
 }
 
 #mensajes {
@@ -222,3 +222,25 @@ h2 {
     margin: 1rem;
 }
 
+.divAtaques {
+    display: flex;
+    width: 80%;
+}
+.divAtaqueFuego {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50rem;
+}
+.divAtaqueAgua {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50rem;
+}
+.divAtaqueTierra {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50rem;
+}
