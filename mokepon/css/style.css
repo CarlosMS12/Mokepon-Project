@@ -25,7 +25,7 @@ html {
 h2 {
     font-family: 'Alata', sans-serif;
     margin-top: 5rem;
-    font-size: 3rem;
+    font-size: 3.5rem;
 
 }
 #seleccionar-mascota {
@@ -36,12 +36,12 @@ h2 {
     align-items: center;
 }
 
-div {
+/* div {
     margin: 1rem;
     border: solid 2px white;
     padding: 0.5rem;
     border-radius: 5rem;
-}
+} */
 #boton-mascota {
     font-family: 'Poppins', sans-serif;
     border-radius: 0.8rem;
@@ -50,17 +50,29 @@ div {
     padding: 0.7rem;
     font-size: 3rem;
     width: 30rem;
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+    margin-top: 2rem;
 }
 #boton-mascota:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     border: solid 2px white;
 }
 .div-container1 {
+    margin: 1rem;
+    border: solid 2px white;
+    padding: 0.5rem;
+    border-radius: 5rem;
     align-items: center;
     display: flex;
 }
 .div-sub1 {
+    margin: 1rem;
+    border: solid 2px white;
+    padding: 0.5rem;
+    border-radius: 5rem;
     height: 50px;
     align-items: center;
     justify-content: center;
@@ -78,6 +90,10 @@ div {
     color: red;
 }
 .div-sub2 {
+    margin: 1rem;
+    border: solid 2px transparent;
+    padding: 0.5rem;
+    border-radius: 5rem;
     font-size: 3.5rem;
     width: 200px;
     height: 200px;
@@ -94,3 +110,115 @@ div {
     border: none;
     margin-top: 2.5rem;
 }
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center;
+}
+.botonAtaque {
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0.8rem;
+    padding: 0.7rem;
+    border-radius: 0.8rem;
+    padding: 0.7rem;
+    font-size: 3rem;
+    width: 30rem;
+    
+}
+#boton-fuego {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    margin: 2rem;
+    margin-top: 5rem
+}
+#boton-fuego:hover {
+    background-color: salmon;
+    border: none;
+    color: black;
+}
+.boton-fuegoImagen {
+    border: 2px solid transparent;
+    margin: 2rem;
+    margin-top: 5rem;
+    background-color: transparent;
+    background-image: url("https://www.freeiconspng.com/thumbs/pokemon-png/render-pokemon-png-1.png");
+    color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50px;
+    background-size: 20rem;
+    height: 30rem;
+}
+.boton-fuegoImagen:hover {
+    background-image: url("https://i.pinimg.com/originals/37/08/62/370862bbff7f3d3345a3d0e9b45a38c3.gif");
+    background-position-x: -12rem;
+    background-size: 500px 300px;
+    border-radius: 5rem;
+}
+#boton-agua {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    margin: 2rem;
+    margin-top: 5rem
+}
+#boton-agua:hover {
+    background-color: lightskyblue;
+    border: none;
+    color: black;
+}
+.boton-aguaImagen {
+    border: 2px solid transparent;
+    margin: 2rem;
+    margin-top: 5rem;
+    background-color: transparent;
+    background-image: url("https://assets.stickpng.com/images/580b57fcd9996e24bc43c32a.png");
+    color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50px;
+    background-size: 22rem;
+    height: 30rem;
+}
+.boton-aguaImagen:hover {
+    background-image: url("https://media.tenor.com/sV0s6jmzPyQAAAAC/squirtle-pokemon.gif");
+    background-position-x: -12rem;
+    background-size: 500px 300px;
+    border-radius: 5rem;
+}
+#boton-tierra {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    margin: 2rem;
+    margin-top: 5rem
+}
+#boton-tierra:hover {
+    background-color: #b16234;
+    border: none;
+    color: black;
+}
+.boton-tierraImagen {
+    border: 2px solid transparent;
+    margin: 2rem;
+    margin-top: 5rem;
+    background-color: transparent;
+    background-image: url("https://static.pokemonpets.com/images/monsters-images-800-800/104-Cubone.webp");
+    color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50px;
+    background-size: 17rem;
+    height: 30rem;
+}
+.boton-tierraImagen:hover {
+    background-image: url("http://pa1.narvii.com/6903/01f9c38879d27a04b7d0b0c2f5d762f30d3a9dbbr1-500-375_00.gif");
+    background-position-x: -12rem;
+    background-size: 500px 300px;
+    border-radius: 5rem;
+}
+
+#mensajes {
+    font-size: 1.6rem;
+}
+#mensajes p {
+    margin: 1rem;
+}
+

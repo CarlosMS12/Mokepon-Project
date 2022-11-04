@@ -15,7 +15,7 @@ function iniciarJuego(){
     
 
     botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador)
-
+    
     let botonFuego = document.getElementById("boton-fuego")
     botonFuego.addEventListener("click", ataqueFuego)
     let botonAgua = document.getElementById("boton-agua")
@@ -31,7 +31,7 @@ function seleccionarMascotaJugador() {
     let sectionSeleccionarMascota = document.getElementById("seleccionar-mascota")
     sectionSeleccionarMascota.style.display = "none"
     let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque")
-    sectionSeleccionarAtaque.style.display = "block"
+    sectionSeleccionarAtaque.style.display = "flex"
     let inputHipodoge = document.getElementById("hipodoge")
     let inputCapipepo = document.getElementById("capipepo")
     let inputRatigueya = document.getElementById("ratigueya")
