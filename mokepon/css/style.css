@@ -15,7 +15,7 @@ html {
     font-size: 25px;
     font-size: 5rem;
     color: wheat;
-    width: 50rem;
+    /* width: 50rem; */
     height: 5rem;
     text-align: center;
     margin-bottom: 5rem;
@@ -24,7 +24,7 @@ html {
 }
 h2 {
     font-family: 'Alata', sans-serif;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     font-size: 3.5rem;
 
 }
@@ -128,8 +128,8 @@ h2 {
     background-color: black;
     color: white;
     border: 2px solid white;
-    margin: 2rem;
-    margin-top: 5rem
+    /* margin: 2rem;
+    margin-top: 5rem */
 }
 #boton-fuego:hover {
     background-color: salmon;
@@ -138,8 +138,8 @@ h2 {
 }
 .boton-fuegoImagen {
     border: 2px solid transparent;
-    margin: 2rem;
-    margin-top: 3rem;
+    /* margin: 2rem;
+    margin-top: 3rem; */
     background-color: transparent;
     background-image: url("https://www.freeiconspng.com/thumbs/pokemon-png/render-pokemon-png-1.png");
     color: transparent;
@@ -150,16 +150,20 @@ h2 {
 }
 .boton-fuegoImagen:hover {
     background-image: url("https://i.pinimg.com/originals/37/08/62/370862bbff7f3d3345a3d0e9b45a38c3.gif");
-    background-position-x: -12rem;
-    background-size: 500px 300px;
+    background-position-x: -1rem;
+    background-size: 27.8rem 25.1rem;
     border-radius: 100rem;
+    /* border: 1px solid white; */
+    height: 25rem;
+    width: 25rem;
+    margin-top: 2rem;
 }
 #boton-agua {
     background-color: black;
     color: white;
     border: 2px solid white;
-    margin: 2rem;
-    margin-top: 5rem
+    /* margin: 2rem;
+    margin-top: 5rem */
 }
 #boton-agua:hover {
     background-color: lightskyblue;
@@ -168,8 +172,8 @@ h2 {
 }
 .boton-aguaImagen {
     border: 2px solid transparent;
-    margin: 2rem;
-    margin-top: 3rem;
+    /* margin: 2rem;
+    margin-top: 3rem; */
     background-color: transparent;
     background-image: url("https://assets.stickpng.com/images/580b57fcd9996e24bc43c32a.png");
     color: transparent;
@@ -180,16 +184,20 @@ h2 {
 }
 .boton-aguaImagen:hover {
     background-image: url("https://media.tenor.com/sV0s6jmzPyQAAAAC/squirtle-pokemon.gif");
-    background-position-x: -12rem;
-    background-size: 500px 300px;
+    background-position-x: -6rem;
+    background-size: 35.2rem 25.1rem;
     border-radius: 100rem;
+    /* border: 1px solid white; */
+    height: 25rem;
+    width: 25rem;
+    margin-top: 2rem;
 }
 #boton-tierra {
     background-color: black;
     color: white;
     border: 2px solid white;
-    margin: 2rem;
-    margin-top: 5rem
+    /* margin: 2rem;
+    margin-top: 5rem */
 }
 #boton-tierra:hover {
     background-color: #b16234;
@@ -198,8 +206,8 @@ h2 {
 }
 .boton-tierraImagen {
     border: 2px solid transparent;
-    margin: 2rem;
-    margin-top: 3rem;
+    /* margin: 2rem;
+    margin-top: 3rem; */
     background-color: transparent;
     background-image: url("https://static.pokemonpets.com/images/monsters-images-800-800/104-Cubone.webp");
     color: transparent;
@@ -213,6 +221,10 @@ h2 {
     background-position-x: -12rem;
     background-size: 500px 300px;
     border-radius: 100rem;
+    /* border: 1px solid white; */
+    height: 25rem;
+    width: 25rem;
+    margin-top: 2rem;
 }
 
 #mensajes {
@@ -232,19 +244,25 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 50rem;
+    width: 35rem;
+    height: 38rem;
+   
 }
 .divAtaqueAgua {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 50rem;
+    width: 35rem;
+    height: 38rem;
+    
 }
 .divAtaqueTierra {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 50rem;
+    width: 35rem;
+    height: 38rem;
+   
 }
 #mensajes {
     width: 40rem;
@@ -272,4 +290,47 @@ h2 {
     box-shadow: 1px1px10px var(--main-color-1);
     background-color: transparent;
     
+}
+.ataquess {
+    display: grid;
+    grid-template-columns: 25rem 25rem;
+    font-size: 3rem;
+    justify-items: center;
+    justify-content: center;
+    gap: 15rem;
+    margin: 3.5rem;
+}
+.ataquess .ataque1 {
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    text-align: center;
+    width: 30rem;
+}
+.ataquess .ataque2 {
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    text-align: center;
+    width: 30rem;
+}
+#seleccionar-ataque {
+    height: 100%;
+}
+#seleccionar-ataque header {
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 730px) {
+    .ataquess {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }
