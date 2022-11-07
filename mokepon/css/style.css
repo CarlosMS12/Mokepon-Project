@@ -270,5 +270,6 @@ h2 {
     background-color: var(--main-color-3);
     color: var(--main-color-2);
     box-shadow: 1px1px10px var(--main-color-1);
+    background-color: transparent;
     
 }
