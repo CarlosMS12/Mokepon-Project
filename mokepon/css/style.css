@@ -71,7 +71,7 @@ h2 {
 .div-sub1 {
     margin: 1rem;
     border: solid 2px white;
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     border-radius: 5rem;
     height: 50px;
     align-items: center;
@@ -79,6 +79,15 @@ h2 {
     text-align: center;
     display: flex;
     width: 150px
+}
+.div-sub1 label {
+    border-radius: 5rem;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    width: 150px;
 }
 .div-sub1:hover {
     background-color: white;
@@ -283,14 +292,8 @@ h2 {
     font-family: 'Mochiy Pop One', sans-serif;
 
 }
-#capipepo:checked + label {
-     
-    background-color: var(--main-color-3);
-    color: var(--main-color-2);
-    box-shadow: 1px1px10px var(--main-color-1);
-    background-color: transparent;
+
     
-}
 .ataquess {
     display: grid;
     grid-template-columns: 25rem 25rem;
@@ -333,4 +336,11 @@ h2 {
         grid-template-columns: repeat(1, 1fr);
     }
 
+}
+input {
+    display: none;
+}
+input:checked + label {
+    background-color: white;
+    color: black;
 }
