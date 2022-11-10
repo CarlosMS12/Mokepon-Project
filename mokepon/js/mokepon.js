@@ -7,12 +7,7 @@ const botonTierra = document.getElementById("boton-tierra")
 const botonReiniciar = document.getElementById("boton-reiniciar")
 
 const sectionSeleccionarMascota = document.getElementById("seleccionar-mascota")
-const inputHipodoge = document.getElementById("hipodoge")
-const inputCapipepo = document.getElementById("capipepo")
-const inputRatigueya = document.getElementById("ratigueya")
-const inputLangostelvis = document.getElementById("langostelvis")
-const inputTucapalma = document.getElementById("tucapalma")
-const inputPydos = document.getElementById("pydos")
+
 const spanMascotaJugador = document.getElementById("mascota-jugador")
 
 const spanMascotaEnemigo = document.getElementById("mascota-enemigo")
@@ -29,7 +24,12 @@ let mokepones = []
 let ataqueJugador
 let ataqueEnemigo
 let opcionDeMokepones
-
+let inputHipodoge
+let inputCapipepo
+let inputRatigueya
+let inputLangostelvis
+let inputTucapalma
+let inputPydos
 let vidasJugador = 3
 let vidasEnemigo = 3
 
@@ -122,6 +122,13 @@ function iniciarJuego(){
         </div>
         `
         contenedorTarjetas.innerHTML += opcionDeMokepones
+
+        inputHipodoge = document.getElementById("Hipodoge")
+        inputCapipepo = document.getElementById("Capipepo")
+        inputRatigueya = document.getElementById("Ratigueya")
+        inputLangostelvis = document.getElementById("Langostelvis")
+        inputTucapalma = document.getElementById("Tucapalma")
+        inputPydos = document.getElementById("Pydos")
     })
 
     sectionReiniciar.style.display = "none"
