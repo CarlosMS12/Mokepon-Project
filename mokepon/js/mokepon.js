@@ -23,10 +23,13 @@ const spanVidasEnemigo = document.getElementById("vidas-enemigo")
 const sectionMensajes = document.getElementById("resultado")
 const ataquesDelJugador = document.getElementById("ataques-del-jugador")
 const ataquesDelEnemigo = document.getElementById("ataques-del-enemigo")
+const contenedorTarjetas = document.getElementById("contenedorTarjetas")
 
 let mokepones = []
 let ataqueJugador
 let ataqueEnemigo
+let opcionDeMokepones
+
 let vidasJugador = 3
 let vidasEnemigo = 3
 
@@ -35,6 +38,7 @@ class Mokepon {
         this.nombre = nombre
         this.foto = foto
         this.vida = vida
+        this.ataques = []
     }
 }
 let hipodoge = new Mokepon("Hipodoge", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_hipodoge_attack.png", 5)
@@ -49,13 +53,77 @@ let tucapalma = new Mokepon("Tucapalma", "http://pngimg.com/uploads/pokemon/poke
 
 let pydos = new Mokepon("Pydos", "http://pngimg.com/uploads/pokemon/pokemon_PNG145.png", 5)
 
-mokepones.push(hipodoge, capipepo, ratigueya, langostelvis, tucapalma, pydos)
 
-console.log(mokepones)
+
+hipodoge.ataques.push(
+    { nombre: "💧", id: "boton-agua"},
+    { nombre: "💧", id: "boton-agua"},
+    { nombre: "💧", id: "boton-agua"},
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "🌱", id: "boton-tierra"}
+)
+capipepo.ataques.push(
+    
+    { nombre: "🌱", id: "boton-tierra"},
+    { nombre: "🌱", id: "boton-tierra"},
+    { nombre: "🌱", id: "boton-tierra"},
+    { nombre: "💧", id: "boton-agua"},
+    { nombre: "🔥", id: "boton-fuego"},
+    
+)
+ratigueya.ataques.push(
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "💧", id: "boton-agua"},
+    { nombre: "🌱", id: "boton-tierra"}
+)
+langostelvis.ataques.push(
+    { nombre: "💧", id: "boton-agua"},
+    { nombre: "💧", id: "boton-agua"},
+    { nombre: "💧", id: "boton-agua"},
+    { nombre: "💧", id: "boton-agua"},
+    { nombre: "🌱", id: "boton-tierra"}
+)
+tucapalma.ataques.push(
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "🌱", id: "boton-tierra"}
+)
+pydos.ataques.push(
+    { nombre: "🌱", id: "boton-tierra"},
+    { nombre: "🌱", id: "boton-tierra"},
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "💧", id: "boton-agua"}
+)
+
+mokepones.push(hipodoge, capipepo, ratigueya, langostelvis, tucapalma, pydos)
 
 function iniciarJuego(){
 
     sectionSeleccionarAtaque.style.display = "none"
+
+    mokepones.forEach((mokepon) => {
+        opcionDeMokepones = `
+        <div class="div-container1">
+                <div class="div-sub1">
+    
+                    <input type="radio" name="mascota" id=${mokepon.nombre}>
+                    <label class="div-container1" for=${mokepon.nombre}>${mokepon.nombre}</label>
+                </div>
+                <div class="div-sub2" style="background-color: lightblue ;">
+                    <img src=${mokepon.foto} alt=${mokepon.nombre} >
+                </div>
+
+                
+        </div>
+        `
+        contenedorTarjetas.innerHTML += opcionDeMokepones
+    })
+
     sectionReiniciar.style.display = "none"
 
     botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador)
