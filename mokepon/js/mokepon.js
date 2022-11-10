@@ -24,11 +24,34 @@ const sectionMensajes = document.getElementById("resultado")
 const ataquesDelJugador = document.getElementById("ataques-del-jugador")
 const ataquesDelEnemigo = document.getElementById("ataques-del-enemigo")
 
-
+let mokepones = []
 let ataqueJugador
 let ataqueEnemigo
 let vidasJugador = 3
 let vidasEnemigo = 3
+
+class Mokepon {
+    constructor(nombre, foto, vida) {
+        this.nombre = nombre
+        this.foto = foto
+        this.vida = vida
+    }
+}
+let hipodoge = new Mokepon("Hipodoge", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_hipodoge_attack.png", 5)
+
+let capipepo = new Mokepon("Capipepo", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_capipepo_attack.png", 5)
+
+let ratigueya = new Mokepon("Ratigueya", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_ratigueya_attack.png", 5)
+
+let langostelvis = new Mokepon("Langostelvis", "http://pngimg.com/uploads/pokemon/pokemon_PNG161.png", 5)
+
+let tucapalma = new Mokepon("Tucapalma", "http://pngimg.com/uploads/pokemon/pokemon_PNG159.png", 5)
+
+let pydos = new Mokepon("Pydos", "http://pngimg.com/uploads/pokemon/pokemon_PNG145.png", 5)
+
+mokepones.push(hipodoge, capipepo, ratigueya, langostelvis, tucapalma, pydos)
+
+console.log(mokepones)
 
 function iniciarJuego(){
 
