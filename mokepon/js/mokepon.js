@@ -19,6 +19,7 @@ const sectionMensajes = document.getElementById("resultado")
 const ataquesDelJugador = document.getElementById("ataques-del-jugador")
 const ataquesDelEnemigo = document.getElementById("ataques-del-enemigo")
 const contenedorTarjetas = document.getElementById("contenedorTarjetas")
+const contenedorAtaques = document.getElementById("contenedorAtaques")
 
 let mokepones = []
 let ataqueJugador
@@ -31,6 +32,7 @@ let inputLangostelvis
 let inputTucapalma
 let inputPydos
 let mascotaJugador
+let ataquesMokepon
 let vidasJugador = 3
 let vidasEnemigo = 3
 
@@ -115,7 +117,7 @@ function iniciarJuego(){
                     <input type="radio" name="mascota" id=${mokepon.nombre}>
                     <label class="div-container1" for=${mokepon.nombre}>${mokepon.nombre}</label>
                 </div>
-                <div class="div-sub2" style="background-color: lightblue ;">
+                <div class="div-sub2" id=${mokepon.nombre}>
                     <img src=${mokepon.foto} alt=${mokepon.nombre} >
                 </div>
 
@@ -183,6 +185,16 @@ function extraerAtaques(mascotaJugador) {
         
     }
     mostrarAtaques(ataques)
+}
+
+function mostrarAtaques(ataques) {
+    ataques.forEach((ataque) => {
+        ataquesMokepon = `
+        <button id=${ataque.id} class="botonAtaque">${ataque.nombre}</button>
+        `
+
+        contenedorAtaques.innerHTML += ataquesMokepon
+    })
 }
 
 function seleccionarMascotaEnemigo(){

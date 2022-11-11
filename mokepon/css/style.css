@@ -112,6 +112,24 @@ h2 {
     width: 100%;
     height: 100%;
 }
+#Hipodoge{
+    background-color: lightblue;
+}
+#Capipepo{
+    background-color: lightgreen;
+}
+#Ratigueya{
+    background-color: salmon;
+}
+#Langostelvis{
+    background-color: lightskyblue;
+}
+#Tucapalma{
+    background-color: lightcoral;
+}
+#Pydos{
+    background-color: lightseagreen;
+}
 .div-mokepones {
     display: flex;
     align-items: center;
