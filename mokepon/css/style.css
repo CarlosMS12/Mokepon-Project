@@ -156,12 +156,12 @@ h2 {
     background-color: black;
     color: white;
     border: 2px solid white;
-    /* margin: 2rem;
-    margin-top: 5rem */
+    margin: 2rem;
+    /* margin-top: 5rem */
 }
 #boton-fuego:hover {
     background-color: salmon;
-    border: none;
+    border: 2px solid;
     color: black;
 }
 .boton-fuegoImagen {
@@ -190,12 +190,12 @@ h2 {
     background-color: black;
     color: white;
     border: 2px solid white;
-    /* margin: 2rem;
-    margin-top: 5rem */
+    margin: 2rem;
+    /* margin-top: 5rem */
 }
 #boton-agua:hover {
     background-color: lightskyblue;
-    border: none;
+    border: 2px solid;
     color: black;
 }
 .boton-aguaImagen {
@@ -224,12 +224,12 @@ h2 {
     background-color: black;
     color: white;
     border: 2px solid white;
-    /* margin: 2rem;
-    margin-top: 5rem */
+    margin: 2rem;
+   /*  margin-top: 5rem */
 }
 #boton-tierra:hover {
     background-color: #b16234;
-    border: 2px  transparent;
+    border: 2px  solid;
     color: black;
 }
 .boton-tierraImagen {

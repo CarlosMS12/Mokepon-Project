@@ -33,7 +33,8 @@ let ataquesMokepon
 let botonFuego
 let botonAgua
 let botonTierra
-
+let botones = []
+let ataquesJugador = []
 let vidasJugador = 3
 let vidasEnemigo = 3
 
@@ -188,7 +189,7 @@ function extraerAtaques(mascotaJugador) {
 function mostrarAtaques(ataques) {
     ataques.forEach((ataque) => {
         ataquesMokepon = `
-        <button id=${ataque.id} class="botonAtaque">${ataque.nombre}</button>
+        <button id=${ataque.id} class="botonAtaque BAtaque">${ataque.nombre}</button>
         `
 
         contenedorAtaques.innerHTML += ataquesMokepon
@@ -197,21 +198,40 @@ function mostrarAtaques(ataques) {
     botonFuego = document.getElementById("boton-fuego")
     botonAgua = document.getElementById("boton-agua")
     botonTierra = document.getElementById("boton-tierra")
- 
+    botones = document.querySelectorAll(".BAtaque")
 
-    botonFuego.addEventListener("click", ataqueFuego)
+/*     botonFuego.addEventListener("click", ataqueFuego)
     botonAgua.addEventListener("click", ataqueAgua)
-    botonTierra.addEventListener("click", ataqueTierra)
+    botonTierra.addEventListener("click", ataqueTierra) */
+}
+function secuenciaAtaque() {
+    botones.forEach((boton) => {
+        boton.addEventListener("click", (e) => {
+            if (e.target.textContent === "🔥") {
+                ataquesJugador.push("FUEGO")
+                console.log(ataquesJugador)
+                boton.style.backgroundColor = "#F586"
+            } else if (e.target.textContent === "💧") {
+                ataquesJugador.push("AGUA")
+                console.log(ataquesJugador)
+                boton.style.backgroundColor = "#F586"
+            } else {
+                ataquesJugador.push("TIERRA")
+                console.log(ataquesJugador)
+                boton.style.backgroundColor = "#F586"
+            }
+        })
+    })
 }
 
 function seleccionarMascotaEnemigo(){
     let mascotaAleatorio = aleatorio(0, mokepones.length -1)
     
     spanMascotaEnemigo.innerHTML = mokepones[mascotaAleatorio].nombre
-
+    secuenciaAtaque()
 }
 
-function ataqueFuego() {
+/* function ataqueFuego() {
     ataqueJugador = "FUEGO"
     ataqueAleatorioEnemigo()
 }
@@ -222,7 +242,7 @@ function ataqueAgua() {
 function ataqueTierra() {
     ataqueJugador = "TIERRA"
     ataqueAleatorioEnemigo()
-}
+} */
 function ataqueAleatorioEnemigo() {
     let ataqueAleatorio = aleatorio(1,3)
 
@@ -302,7 +322,7 @@ function crearMensajeFinal(resultadoFinal) {
     
     sectionReiniciar.style.display = "block"
     //boton fuego detenerse
-    let botonnoneF = document.getElementById("boton-fuego")
+/*     let botonnoneF = document.getElementById("boton-fuego")
     botonnoneF.style.backgroundColor = "black"
     botonnoneF.style.border = "2px solid white"
     botonnoneF.style.color = "white"
@@ -315,7 +335,8 @@ function crearMensajeFinal(resultadoFinal) {
     let botonnoneT = document.getElementById("boton-tierra")
     botonnoneT.style.backgroundColor = "black"
     botonnoneT.style.border = "2px solid white"
-    botonnoneT.style.color = "white"
+    botonnoneT.style.color = "white" */
+
 
 
 
