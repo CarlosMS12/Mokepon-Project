@@ -1,9 +1,6 @@
 const sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque")
 const sectionReiniciar = document.getElementById("reiniciar")
 const botonMascotaJugador = document.getElementById("boton-mascota")
-const botonFuego = document.getElementById("boton-fuego")
-const botonAgua = document.getElementById("boton-agua")
-const botonTierra = document.getElementById("boton-tierra")
 const botonReiniciar = document.getElementById("boton-reiniciar")
 
 const sectionSeleccionarMascota = document.getElementById("seleccionar-mascota")
@@ -33,6 +30,10 @@ let inputTucapalma
 let inputPydos
 let mascotaJugador
 let ataquesMokepon
+let botonFuego
+let botonAgua
+let botonTierra
+
 let vidasJugador = 3
 let vidasEnemigo = 3
 
@@ -120,7 +121,6 @@ function iniciarJuego(){
                 <div class="div-sub2" id=${mokepon.nombre}>
                     <img src=${mokepon.foto} alt=${mokepon.nombre} >
                 </div>
-
                 
         </div>
         `
@@ -138,9 +138,7 @@ function iniciarJuego(){
 
     botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador)
     
-    botonFuego.addEventListener("click", ataqueFuego)
-    botonAgua.addEventListener("click", ataqueAgua)
-    botonTierra.addEventListener("click", ataqueTierra)
+
 
     botonReiniciar.addEventListener("click", reiniciarJuego)
 
@@ -195,6 +193,15 @@ function mostrarAtaques(ataques) {
 
         contenedorAtaques.innerHTML += ataquesMokepon
     })
+
+    botonFuego = document.getElementById("boton-fuego")
+    botonAgua = document.getElementById("boton-agua")
+    botonTierra = document.getElementById("boton-tierra")
+ 
+
+    botonFuego.addEventListener("click", ataqueFuego)
+    botonAgua.addEventListener("click", ataqueAgua)
+    botonTierra.addEventListener("click", ataqueTierra)
 }
 
 function seleccionarMascotaEnemigo(){
