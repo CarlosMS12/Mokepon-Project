@@ -149,17 +149,17 @@ function seleccionarMascotaJugador() {
     
 
     if (inputHipodoge.checked){
-        spanMascotaJugador.innerHTML = "Hipodoge"
+        spanMascotaJugador.innerHTML = inputHipodoge.id
     } else if (inputCapipepo.checked) {
-        spanMascotaJugador.innerHTML = "Capipepo"
+        spanMascotaJugador.innerHTML = inputCapipepo.id
     } else if (inputRatigueya.checked) {
-        spanMascotaJugador.innerHTML = "Ratigueya"
+        spanMascotaJugador.innerHTML = inputRatigueya.id
     } else if (inputLangostelvis.checked) {
-        spanMascotaJugador.innerHTML = "Langostelvis"
+        spanMascotaJugador.innerHTML = inputLangostelvis.id
     }  else if (inputTucapalma.checked) {
-        spanMascotaJugador.innerHTML = "Tucapalma" 
+        spanMascotaJugador.innerHTML = inputTucapalma.id
     } else if (inputPydos.checked) {
-        spanMascotaJugador.innerHTML = "Pydos"
+        spanMascotaJugador.innerHTML = inputPydos.id
     } else {
         alert("Selecciona a tu mascota")
     }
@@ -168,22 +168,10 @@ function seleccionarMascotaJugador() {
 }
 
 function seleccionarMascotaEnemigo(){
-    let mascotaAleatorio = aleatorio(1,6)
+    let mascotaAleatorio = aleatorio(0, mokepones.length -1)
     
+    spanMascotaEnemigo.innerHTML = mokepones[mascotaAleatorio].nombre
 
-    if(mascotaAleatorio==1){
-        spanMascotaEnemigo.innerHTML = "Hipodoge "
-    } else if(mascotaAleatorio==2){
-        spanMascotaEnemigo.innerHTML = "Capipepo "
-    } else if(mascotaAleatorio==3){
-        spanMascotaEnemigo.innerHTML = "Ratigueya "
-    } else if(mascotaAleatorio==4){
-        spanMascotaEnemigo.innerHTML = "Langostelvis "
-    } else if(mascotaAleatorio==5){
-        spanMascotaEnemigo.innerHTML = "Tucapalma "
-    } else {
-        spanMascotaEnemigo.innerHTML = "Pydos "
-    }
 }
 
 function ataqueFuego() {
