@@ -68,11 +68,11 @@ let capipepo = new Mokepon("Capipepo", "https://static.platzi.com/media/tmp/clas
 
 let ratigueya = new Mokepon("Ratigueya", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_ratigueya_attack.png", 5)
 
-let langostelvis = new Mokepon("Langostelvis", "http://pngimg.com/uploads/pokemon/pokemon_PNG161.png", 5)
+let langostelvis = new Mokepon("Langostelvis", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_langostelvis_attack.png", 5)
 
-let tucapalma = new Mokepon("Tucapalma", "http://pngimg.com/uploads/pokemon/pokemon_PNG159.png", 5)
+let tucapalma = new Mokepon("Tucapalma", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_tucapalma_attack.png", 5)
 
-let pydos = new Mokepon("Pydos", "http://pngimg.com/uploads/pokemon/pokemon_PNG145.png", 5)
+let pydos = new Mokepon("Pydos", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_pydos_attack.png", 5)
 
 
 
