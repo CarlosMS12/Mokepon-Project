@@ -148,6 +148,50 @@ pydos.ataques.push(
     { nombre: "🔥", id: "boton-fuego"},
     { nombre: "💧", id: "boton-agua"}
 )
+hipodogeEnemigo.ataques.push(
+    { nombre: "💧", id: "boton-agua"},
+    { nombre: "💧", id: "boton-agua"},
+    { nombre: "💧", id: "boton-agua"},
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "🌱", id: "boton-tierra"}
+)
+capipepoEnemigo.ataques.push(
+    
+    { nombre: "🌱", id: "boton-tierra"},
+    { nombre: "🌱", id: "boton-tierra"},
+    { nombre: "🌱", id: "boton-tierra"},
+    { nombre: "💧", id: "boton-agua"},
+    { nombre: "🔥", id: "boton-fuego"},
+    
+)
+ratigueyaEnemigo.ataques.push(
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "💧", id: "boton-agua"},
+    { nombre: "🌱", id: "boton-tierra"}
+)
+langostelvisEnemigo.ataques.push(
+    { nombre: "💧", id: "boton-agua"},
+    { nombre: "💧", id: "boton-agua"},
+    { nombre: "💧", id: "boton-agua"},
+    { nombre: "💧", id: "boton-agua"},
+    { nombre: "🌱", id: "boton-tierra"}
+)
+tucapalmaEnemigo.ataques.push(
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "🌱", id: "boton-tierra"}
+)
+pydosEnemigo.ataques.push(
+    { nombre: "🌱", id: "boton-tierra"},
+    { nombre: "🌱", id: "boton-tierra"},
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "🔥", id: "boton-fuego"},
+    { nombre: "💧", id: "boton-agua"}
+)
 
 mokepones.push(hipodoge, capipepo, ratigueya, langostelvis, tucapalma, pydos)
 
@@ -192,7 +236,7 @@ function iniciarJuego(){
 function seleccionarMascotaJugador() {
     
     sectionSeleccionarMascota.style.display = "none"
-    /* sectionSeleccionarAtaque.style.display = "flex" */
+    
  
     if (inputHipodoge.checked){
         spanMascotaJugador.innerHTML = inputHipodoge.id
@@ -219,7 +263,7 @@ function seleccionarMascotaJugador() {
     extraerAtaques(mascotaJugador)
     sectionVerMapa.style.display = "flex"
     iniciarMapa()
-    seleccionarMascotaEnemigo()
+    
 }
 function extraerAtaques(mascotaJugador) {
     let ataques
@@ -277,11 +321,11 @@ function secuenciaAtaque() {
     })
 }
 
-function seleccionarMascotaEnemigo(){
-    let mascotaAleatorio = aleatorio(0, mokepones.length -1)
+function seleccionarMascotaEnemigo(enemigo){
+    /* let mascotaAleatorio = aleatorio(0, mokepones.length -1) */
     
-    spanMascotaEnemigo.innerHTML = mokepones[mascotaAleatorio].nombre
-    ataquesMokeponEnemigo = mokepones[mascotaAleatorio].ataques
+    spanMascotaEnemigo.innerHTML = enemigo.nombre
+    ataquesMokeponEnemigo = enemigo.ataques
     secuenciaAtaque()
 }
 
@@ -555,7 +599,12 @@ function revisarColision(enemigo) {
         return;
     }
     detenerMovimiento()
-    alert("Hay colision" +enemigo.nombre)
+    clearInterval(intervalo)
+    console.log("colision");
+    /* alert("Hay colision" +enemigo.nombre) */
+    sectionSeleccionarAtaque.style.display = "flex"
+    sectionVerMapa.style.display = "none"
+    seleccionarMascotaEnemigo(enemigo)
 }
 
 window.addEventListener("load", iniciarJuego)
