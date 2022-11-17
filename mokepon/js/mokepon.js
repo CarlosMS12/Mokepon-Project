@@ -108,7 +108,7 @@ let capipepoEnemigo = new Mokepon("Capipepo", "https://static.platzi.com/media/t
 
 let ratigueyaEnemigo = new Mokepon("Ratigueya", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_ratigueya_attack.png", 5, "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-65-clases-methods/programar/mokepon/assets/ratigueya.png")
 
-let langostelvisEnemigo = new Mokepon("Langostelvis", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_langostelvis_attack.png", 5, "/assets/mokepons_mokepon_langostelvis_attack.png")
+let langostelvisEnemigo = new Mokepon("Langostelvis", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_langostelvis_attack.png", 5, "/mokepon/assets/mokepons_mokepon_langostelvis_attack.png")
 
 let tucapalmaEnemigo = new Mokepon("Tucapalma", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_tucapalma_attack.png", 5, "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_tucapalma_attack.png")
 
