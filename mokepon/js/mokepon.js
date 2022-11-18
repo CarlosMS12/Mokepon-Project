@@ -67,7 +67,8 @@ mapa.width = anchoDelMapa
 mapa.height = alturaQueBuscamos
 
 class Mokepon {
-    constructor(nombre, foto, vida, fotoMapa) {
+    constructor(nombre, foto, vida, fotoMapa, id = null) {
+        this.id = id
         this.nombre = nombre
         this.foto = foto
         this.vida = vida
@@ -104,108 +105,67 @@ let tucapalma = new Mokepon("Tucapalma", "https://static.platzi.com/media/tmp/cl
 
 let pydos = new Mokepon("Pydos", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_pydos_attack.png", 5, "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_pydos_attack.png")
 
-let hipodogeEnemigo = new Mokepon("Hipodoge", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_hipodoge_attack.png", 5, "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-65-clases-methods/programar/mokepon/assets/hipodoge.png")
 
-let capipepoEnemigo = new Mokepon("Capipepo", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_capipepo_attack.png", 5, "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-65-clases-methods/programar/mokepon/assets/capipepo.png")
-
-let ratigueyaEnemigo = new Mokepon("Ratigueya", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_ratigueya_attack.png", 5, "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-65-clases-methods/programar/mokepon/assets/ratigueya.png")
-
-let langostelvisEnemigo = new Mokepon("Langostelvis", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_langostelvis_attack.png", 5, "/mokepon/assets/mokepons_mokepon_langostelvis_attack.png")
-
-let tucapalmaEnemigo = new Mokepon("Tucapalma", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_tucapalma_attack.png", 5, "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_tucapalma_attack.png")
-
-let pydosEnemigo = new Mokepon("Pydos", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_pydos_attack.png", 5, "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_pydos_attack.png")
-
-
-
-hipodoge.ataques.push(
+const HIPODOGE_ATAQUES = [
     { nombre: "💧", id: "boton-agua"},
     { nombre: "💧", id: "boton-agua"},
     { nombre: "💧", id: "boton-agua"},
     { nombre: "🔥", id: "boton-fuego"},
     { nombre: "🌱", id: "boton-tierra"}
-)
-capipepo.ataques.push(
-    
+]
+hipodoge.ataques.push(...HIPODOGE_ATAQUES)
+/* hipodogeEnemigo.ataques.push(...HIPODOGE_ATAQUES) */
+
+const CAPIPEPO_ATAQUES = [
     { nombre: "🌱", id: "boton-tierra"},
     { nombre: "🌱", id: "boton-tierra"},
     { nombre: "🌱", id: "boton-tierra"},
     { nombre: "💧", id: "boton-agua"},
     { nombre: "🔥", id: "boton-fuego"},
-    
-)
-ratigueya.ataques.push(
+]
+capipepo.ataques.push(...CAPIPEPO_ATAQUES)
+/* capipepoEnemigo.ataques.push(...CAPIPEPO_ATAQUES) */
+
+const RATIGUEYA_ATAQUES =[
     { nombre: "🔥", id: "boton-fuego"},
     { nombre: "🔥", id: "boton-fuego"},
     { nombre: "🔥", id: "boton-fuego"},
     { nombre: "💧", id: "boton-agua"},
     { nombre: "🌱", id: "boton-tierra"}
-)
-langostelvis.ataques.push(
+]
+ratigueya.ataques.push(...RATIGUEYA_ATAQUES)
+/* ratigueyaEnemigo.ataques.push(...RATIGUEYA_ATAQUES) */
+
+const LANGOSTELVIS_ATAQUES = [
     { nombre: "💧", id: "boton-agua"},
     { nombre: "💧", id: "boton-agua"},
     { nombre: "💧", id: "boton-agua"},
     { nombre: "💧", id: "boton-agua"},
     { nombre: "🌱", id: "boton-tierra"}
-)
-tucapalma.ataques.push(
+]
+langostelvis.ataques.push(...LANGOSTELVIS_ATAQUES)
+/* langostelvisEnemigo.ataques.push(...LANGOSTELVIS_ATAQUES) */
+
+const TUCAPALMA_ATAQUES = [
     { nombre: "🔥", id: "boton-fuego"},
     { nombre: "🔥", id: "boton-fuego"},
     { nombre: "🔥", id: "boton-fuego"},
     { nombre: "🔥", id: "boton-fuego"},
     { nombre: "🌱", id: "boton-tierra"}
-)
-pydos.ataques.push(
+]
+tucapalma.ataques.push(...TUCAPALMA_ATAQUES)
+/* tucapalmaEnemigo.ataques.push(...TUCAPALMA_ATAQUES) */
+
+const PYDOS_ATAQUES = [
     { nombre: "🌱", id: "boton-tierra"},
     { nombre: "🌱", id: "boton-tierra"},
     { nombre: "🔥", id: "boton-fuego"},
     { nombre: "🔥", id: "boton-fuego"},
     { nombre: "💧", id: "boton-agua"}
-)
-hipodogeEnemigo.ataques.push(
-    { nombre: "💧", id: "boton-agua"},
-    { nombre: "💧", id: "boton-agua"},
-    { nombre: "💧", id: "boton-agua"},
-    { nombre: "🔥", id: "boton-fuego"},
-    { nombre: "🌱", id: "boton-tierra"}
-)
-capipepoEnemigo.ataques.push(
-    
-    { nombre: "🌱", id: "boton-tierra"},
-    { nombre: "🌱", id: "boton-tierra"},
-    { nombre: "🌱", id: "boton-tierra"},
-    { nombre: "💧", id: "boton-agua"},
-    { nombre: "🔥", id: "boton-fuego"},
-    
-)
-ratigueyaEnemigo.ataques.push(
-    { nombre: "🔥", id: "boton-fuego"},
-    { nombre: "🔥", id: "boton-fuego"},
-    { nombre: "🔥", id: "boton-fuego"},
-    { nombre: "💧", id: "boton-agua"},
-    { nombre: "🌱", id: "boton-tierra"}
-)
-langostelvisEnemigo.ataques.push(
-    { nombre: "💧", id: "boton-agua"},
-    { nombre: "💧", id: "boton-agua"},
-    { nombre: "💧", id: "boton-agua"},
-    { nombre: "💧", id: "boton-agua"},
-    { nombre: "🌱", id: "boton-tierra"}
-)
-tucapalmaEnemigo.ataques.push(
-    { nombre: "🔥", id: "boton-fuego"},
-    { nombre: "🔥", id: "boton-fuego"},
-    { nombre: "🔥", id: "boton-fuego"},
-    { nombre: "🔥", id: "boton-fuego"},
-    { nombre: "🌱", id: "boton-tierra"}
-)
-pydosEnemigo.ataques.push(
-    { nombre: "🌱", id: "boton-tierra"},
-    { nombre: "🌱", id: "boton-tierra"},
-    { nombre: "🔥", id: "boton-fuego"},
-    { nombre: "🔥", id: "boton-fuego"},
-    { nombre: "💧", id: "boton-agua"}
-)
+]
+pydos.ataques.push(...PYDOS_ATAQUES)
+/* pydosEnemigo.ataques.push(...PYDOS_ATAQUES) */
+
 
 mokepones.push(hipodoge, capipepo, ratigueya, langostelvis, tucapalma, pydos)
 
@@ -578,6 +538,36 @@ function enviarPosicion(x, y){
             x,
             y
         })
+    })
+    .then(function(res){
+        if(res.ok) {
+            res.json()
+            .then(function({enemigos}){
+                console.log(enemigos)
+                
+                enemigos.forEach(function(enemigo) {
+                    let mokeponEnemigo = null
+                    const mokeponNombre = enemigo.mokepon.nombre || ""
+                    if (mokeponNombre === "Hipodoge") {
+                        mokeponEnemigo = new Mokepon("Hipodoge", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_hipodoge_attack.png", 5, "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-65-clases-methods/programar/mokepon/assets/hipodoge.png")
+                    } else if (mokeponNombre === "Capipepo") {
+                        mokeponEnemigo = new Mokepon("Capipepo", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_capipepo_attack.png", 5, "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-65-clases-methods/programar/mokepon/assets/capipepo.png")
+                    } else if (mokeponNombre === "Ratigueya") {
+                        mokeponEnemigo = new Mokepon("Ratigueya", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_ratigueya_attack.png", 5, "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-65-clases-methods/programar/mokepon/assets/ratigueya.png")
+                    } else if (mokeponNombre === "Langostelvis") {
+                        mokeponEnemigo = new Mokepon("Langostelvis", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_langostelvis_attack.png", 5, "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_langostelvis_attack.png")
+                    } else if (mokeponNombre === "Tucapalma") {
+                        mokeponEnemigo = new Mokepon("Tucapalma", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_tucapalma_attack.png", 5, "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_tucapalma_attack.png")
+                    } else if (mokeponNombre === "Pydos") {
+                        mokeponEnemigo = new Mokepon("Pydos", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_pydos_attack.png", 5, "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_pydos_attack.png")
+                    }
+
+                    mokeponEnemigo.x = enemigo.x
+                    mokeponEnemigo.y = enemigo.y
+                    mokeponEnemigo.pintarMokepon()
+                })
+            })
+        }
     })
 }
 
