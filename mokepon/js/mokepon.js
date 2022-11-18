@@ -96,7 +96,7 @@ let capipepo = new Mokepon("Capipepo", "https://static.platzi.com/media/tmp/clas
 
 let ratigueya = new Mokepon("Ratigueya", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_ratigueya_attack.png", 5, "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-65-clases-methods/programar/mokepon/assets/ratigueya.png")
 
-let langostelvis = new Mokepon("Langostelvis", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_langostelvis_attack.png", 5, "/assets/mokepons_mokepon_langostelvis_attack.png")
+let langostelvis = new Mokepon("Langostelvis", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_langostelvis_attack.png", 5, "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_langostelvis_attack.png")
 
 let tucapalma = new Mokepon("Tucapalma", "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_tucapalma_attack.png", 5, "https://static.platzi.com/media/tmp/class-files/github/curso-programacion-basica/curso-programacion-basica-59-detalles-finales-again/programar/mokepon/assets/mokepons_mokepon_tucapalma_attack.png")
 
@@ -244,7 +244,22 @@ function iniciarJuego(){
 
     botonReiniciar.addEventListener("click", reiniciarJuego)
 
+    unirseAlJuego()
+
 }
+
+function unirseAlJuego() {
+    fetch("http://127.0.0.1:8080/unirse")
+        .then(function(res){
+            if (res.ok) {
+                res.text()
+                    .then(function(respuesta) {
+                        console.log(respuesta);
+                    })
+            }
+        })
+}
+
 function seleccionarMascotaJugador() {
     
     sectionSeleccionarMascota.style.display = "none"
