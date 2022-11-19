@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>MOKEPON!</title>
     
     <style>
@@ -45,11 +45,23 @@
     <section id="ver-mapa">
         <h2 class="subtitulo">Recorre el mapa mokepon 🔥💧🌱</h2>
         <canvas id="mapa"></canvas>
-        <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
+        <button 
+        ontouchend="detenerMovimiento()" ontouchstart="moverArriba()"
+        onmouseup="detenerMovimiento()" onmousedown="moverArriba()"
+        >Arriba</button>
         <div>
-            <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>
-            <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
-            <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
+            <button 
+            ontouchend="detenerMovimiento()" ontouchstart="moverIzquierda()"
+            onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()"
+            >Izquierda</button>
+            <button 
+            ontouchend="detenerMovimiento()" ontouchstart="moverAbajo()"
+            onmouseup="detenerMovimiento()" onmousedown="moverAbajo()"
+            >Abajo</button>
+            <button 
+            ontouchend="detenerMovimiento()" ontouchstart="moverDerecha()"
+            onmouseup="detenerMovimiento()" onmousedown="moverDerecha()"
+            >Derecha</button>
         </div>
             
     </section>
@@ -99,6 +111,6 @@
     </section>
 
     
-    <script src="./js/mokepon.js"></script>
+    <script src="./mokepon.js"></script>
 </body>
 </html>
