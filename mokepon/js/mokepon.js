@@ -225,10 +225,6 @@ function unirseAlJuego() {
 }
 
 function seleccionarMascotaJugador() {
-    
-    sectionSeleccionarMascota.style.display = "none"
-    
- 
     if (inputHipodoge.checked){
         spanMascotaJugador.innerHTML = inputHipodoge.id
         mascotaJugador = inputHipodoge.id
@@ -249,7 +245,10 @@ function seleccionarMascotaJugador() {
         mascotaJugador = inputPydos.id
     } else {
         alert("Selecciona a tu mascota")
+        return
     }
+
+    sectionSeleccionarMascota.style.display = "none"
 
     seleccionarMokepon(mascotaJugador) 
 
@@ -330,7 +329,7 @@ function secuenciaAtaque() {
 }
 
 function enviarAtaques() {
-    fetch(`http://127.0.0.1:8080/mokepon/${jugadorId}/ataques`,{
+    fetch(`http://localhost:8080/mokepon/${jugadorId}/ataques`,{
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -344,7 +343,7 @@ function enviarAtaques() {
 }
 
 function obtenerAtaques() {
-    fetch (`http://127.0.0.1:8080/mokepon/${enemigoId}/ataques`)
+    fetch (`http://localhost:8080/mokepon/${enemigoId}/ataques`)
     .then(function(res) {
         if (res.ok) {
             res.json()
@@ -552,7 +551,7 @@ function pintarCanvas () {
 }
 
 function enviarPosicion(x, y){
-    fetch(`http://127.0.0.1:8080/mokepon/${jugadorId}/posicion`,{
+    fetch(`http://localhost:8080/mokepon/${jugadorId}/posicion`,{
         method: "post",
         headers: {
             "Content-Type": "application/json"
