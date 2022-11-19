@@ -1,7 +1,7 @@
-node_modules
+/node_modules
 ./js
-pagina.html
-piedrapepeltijera.html
-piedrapepeltijera2.html
-piedrapepeltijera3.html
-codigo-eliminado.txt
+/pagina.html
+/piedrapepeltijera.html
+/piedrapepeltijera2.html
+/piedrapepeltijera3.html
+/codigo-eliminado.txt
