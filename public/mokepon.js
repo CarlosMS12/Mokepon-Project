@@ -1,4 +1,4 @@
-const URL = "https://carlosms12.github.io/Mokepon-Project/mokepon/mokepon.html"
+const URL = "https://carlosms12.github.io/Mokepon-Project/public/mokepon.html"
 const sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque")
 const sectionReiniciar = document.getElementById("reiniciar")
 const botonMascotaJugador = document.getElementById("boton-mascota")
